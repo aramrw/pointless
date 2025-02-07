@@ -554,10 +554,6 @@ class Paper extends React.Component {
         newShape.points = [
           ...middleLine,
           endpoint,
-          ...arrowHeadLeftLine,
-          endpoint,
-          ...arrowHeadRightLine,
-          endpoint,
         ];
         break;
       }
@@ -755,11 +751,11 @@ class Paper extends React.Component {
             // direction the user is drawing.
             const p1 =
               this.state.currentShape.points[
-                Math.max(0, this.state.currentShape.points.length - 2)
+              Math.max(0, this.state.currentShape.points.length - 2)
               ];
             const p2 =
               this.state.currentShape.points[
-                Math.max(0, this.state.currentShape.points.length - 1)
+              Math.max(0, this.state.currentShape.points.length - 1)
               ];
             const angle = (Math.atan2(p2.y - p1.y, p2.x - p1.x) * 180) / Math.PI;
             const direction = {
